@@ -40,6 +40,7 @@ class ScrollTimerListener implements ActionListener
 
 class FeedTimerListener implements ActionListener
 {
+	private final int RATE = 50;  //scroll rate in msec
 	private Ticker ticker;
 	private String[] quotes;
 	private StringBuilder sb;
@@ -61,7 +62,7 @@ class FeedTimerListener implements ActionListener
 		//does string length exceed label length?
 		if(ticker.getGraphics().getFontMetrics().stringWidth(ticker.getText()) > ticker.getWidth())
 		{
-			new Timer(50, new ScrollTimerListener(sb, ticker)).start();
+			new Timer(RATE, new ScrollTimerListener(sb, ticker)).start();
 		}
 	}
 }
