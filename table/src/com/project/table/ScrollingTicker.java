@@ -82,7 +82,7 @@ class Ticker extends JLabel
 		start();
 	}
 	
-	//simulates real time feed data. For display only.
+	//simulates real time feed data. For simulation only.
 	private void createQuotes()
 	{
 		Random random = new Random();
@@ -102,7 +102,7 @@ class Ticker extends JLabel
 	}
 }
 
-public class ScrollingTicker extends JFrame 
+public class  ScrollingTicker extends JFrame 
 {
 	
 	public ScrollingTicker()
